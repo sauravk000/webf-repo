@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/webf-repo/style/main.css"> -->
     <title>Second Day</title>
 </head>
 <body>
+    <!-- Unorderded List -->
     <ul type="circle">
         <li>Want to buy something.</li>
         <li>Nothing to do.</li>
         <li>Eat some good.</li>
     </ul>
+    <!-- Ordered List -->
     <ol type="2", start="6">
         <li>Want to buy something.
             <!-- Nested lists -->
@@ -25,11 +28,100 @@
         <li>Eat some good.</li>
     </ul>
     <br/>
-    <form action="/">
+    <!-- Description -->
+    <dl>
+        <dt>Potato</dt>
+        <dd>Something we eat.</dd>
+    </dl>
+    <br/>
+    <!-- Tables -->
+    <table border="1px" width="450px" bgcolor="#fff000" >
+        <thead bgcolor="orange">
+            <tr>
+                <th colspan="1.5">First Thing</th>
+                <th>Second Thing</th>
+                <th>Empty</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td colspan="2">Banana</td>
+                <td>Chocolate</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>Chocolate</td>
+            </tr>
+            <tr>
+                <td colspan="2">Banana</td>
+                <td>Chocolate</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2" bgcolor="yellow">Tomato</td>
+                <td>Chocolate</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>Chocolate</td>
+            </tr>
+            <tr>
+                <td colspan="2">Banana</td>
+                <td>Chocolate</td>
+            </tr>
+            <tr>
+                <td colspan="2">Banana</td>
+                <td>Chocolate</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>Chocolate</td>
+            </tr>
+            <tr>
+                <td colspan="2">Banana</td>
+                <td>Chocolate</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <!-- Form -->
+    <form action="/webf-repo/index.html" method="post">
         <fieldset>
-            <input type="text"/>
-            <input type="button" value="Click me for more"/>
+            <label for="name">Name</label>
+            <input type="text" name ="name" required placeholder="Enter your name">
         </fieldset>
+        
+        <fieldset>
+            <label for="pwd">Password</label>
+            <input type="password" required name="password">
+        </fieldset>
+
+        <fieldset>
+            <label for="something">Choose a number</label>
+            <input type="radio" name="Something">One</input>
+            <input type="radio" name="Something">Two</input>
+        </fieldset>
+        <fieldset>
+            <label for="other">Choose a number</label>
+            <input type="checkbox" name="other">One</input>
+            <input type="checkbox" name="other">Two</input>
+        </fieldset>
+
+        <fieldset>
+        <label for="something">Choose something</label>
+            <select name="something">
+                <option>Select</option>
+                <option value="tom">Tomato</option>
+                <option value="peas">Peas</option>
+                <option value="card">Card</option>
+                <option value="soup">Soup</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <textarea placeholder="Enter your comment" rows="4" required></textarea>
+        </fieldset>
+        <input type="submit" onclick="let x = prompt('Enter somting');alert('You have entered: ' + x);" value="Submit"/>
+        <input type="reset"/>
     </form>
 </body>
 </html>
